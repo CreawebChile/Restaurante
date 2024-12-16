@@ -406,6 +406,21 @@ footer {
     .hero h1 {
         font-size: 2.5rem;
     }
+
+    .hero {
+        background-attachment: scroll; /* Eliminar fixed en móviles */
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .hero::before {
+        opacity: 0.7; /* Aumentar la opacidad del overlay en móviles */
+        background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.85));
+    }
 }
 
 .reserva-form {
