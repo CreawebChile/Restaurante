@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta - La Terraza del Chef</title>
+    <link rel="stylesheet" href="styles/style.css">  <!-- Este debe ir primero -->
+    <link rel="stylesheet" href="styles/menu.css">   <!-- Este después -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">La Terraza del Chef</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#menu">Carta</a></li>
+            <li><a href="index.html#reservas">Reservas</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#menu">Carta</a></li>
+            <li><a href="index.html#reservas">Reservas</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="menu-wrapper" id="menu">
+        <header class="menu-header">
+            <h1>Nuestra Carta</h1>
+            <p>Fusión de sabores chilenos y mediterráneos</p>
+        </header>
+
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="todo">Todo</button>
+            <button class="category-btn" data-category="entradas">Entradas</button>
+            <button class="category-btn" data-category="principales">Principales</button>
+            <button class="category-btn" data-category="postres">Postres</button>
+            <button class="category-btn" data-category="bebidas">Bebidas</button>
+        </div>
+        
+        <section class="menu-content">
+            <div class="menu-section" data-category="entradas">
+                <h2>Entradas</h2>
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3>${item.nombre}</h3>
+                        <p class="menu-item-description">${item.descripcion}</p>
+                        <div class="menu-item-footer">
+                            <div class="price">$4.900</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Ceviche Chileno</h3>
+                            <p>Reineta del día, limón de pica, cilantro y merkén</p>
+                        </div>
+                        <span class="price">$8.900</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" data-category="principales">
+                <h2>Platos Principales</h2>
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Plateada Braseada 36 horas</h3>
+                            <p>Con puré rústico de papas, vegetales grillados y reducción de vino tinto</p>
+                        </div>
+                        <span class="price">$16.900</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Congrio a la Chilena</h3>
+                            <p>Pescado fresco, salsa de camarones y papas doradas</p>
+                        </div>
+                        <span class="price">$15.900</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Pastel de Choclo Gourmet</h3>
+                            <p>Choclo cremoso, carne de res y pollo, aceitunas y huevo duro</p>
+                        </div>
+                        <span class="price">$12.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" data-category="postres">
+                <h2>Postres</h2>
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Leche Asada Casera</h3>
+                            <p>Con salsa de caramelo y crumble de almendras</p>
+                        </div>
+                        <span class="price">$5.900</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Tarta de Chocolate</h3>
+                            <p>70% cacao con helado de vainilla de Madagascar</p>
+                        </div>
+                        <span class="price">8,50€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Crema Catalana</h3>
+                            <p>Receta tradicional con naranja y canela</p>
+                        </div>
+                        <span class="price">7,00€</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" data-category="bebidas">
+                <h2>Bebidas</h2>
+                <div class="menu-items-grid">
+                    <!-- Contenido de bebidas -->
+                </div>
+            </div>
+        </section>
+
+        <div class="menu-footer">
+            <p>* Todos los precios incluyen IVA</p>
+            <p>Consulte a nuestro personal por opciones vegetarianas y veganas</p>
+            <p>Información sobre alérgenos disponible bajo petición</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mi Restaurante - Todos los derechos reservados</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="js/menu.js"></script>
+    <script src="js/hamburger.js"></script>  <!-- Nuevo archivo unificado para el menú hamburguesa -->
+</body>
+</html>
